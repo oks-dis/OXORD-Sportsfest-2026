@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPORTSFEST 2026 - Season IV</title>
+    
+    <!-- External CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
+    <style>
+        body {
+            background: #041b1f;
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: radial-gradient(circle at 20% 20%, rgba(0, 255, 255, .12), transparent 30%),
+                        radial-gradient(circle at 80% 20%, rgba(204, 255, 0, .12), transparent 30%),
+                        linear-gradient(135deg, #041b1f, #082d31, #031114);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, .06);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 20px;
+        }
+
+        .team-logo {
+            width: 160px;
+            height: 160px;
+            object-fit: contain;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            50% { transform: translateY(-10px); }
+        }
+
+        .vs {
+            font-size: 70px;
+            color: #ccff00;
+            text-shadow: 0 0 20px #ccff00;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            50% { transform: scale(1.1); }
+        }
+
+        .btn-volt {
+            background: #ccff00;
+            color: #111;
+            font-weight: 700;
+        }
+
+        .section-title {
+            color: #ccff00;
+        }
+
+        .cardx {
+            background: #0a2a2e;
+            border: 1px solid #1b6468;
+            border-radius: 18px;
+            padding: 20px;
+            height: 100%;
+        }
+
+        footer {
+            background: #021012;
+        }
+
+        #countdown div {
+            min-width: 90px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">SPORTSFEST 2026 - SEASON IV</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quick">Quick Links</a></li>
+   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center">
+        <div class="container text-center">
+            <img src="images/OXORD-SPORTSFEST-2026-LOGO.png" class="img-fluid mb-3" style="max-width: 520px;" alt="Sportsfest 2026 Logo">
+
+
+            <div class="row align-items-center mt-5">
+                <!-- Team AI Legends -->
+                <div class="col-md-5">
+                    <div class="glass p-4">
+                        <a href="https://github.com/settings/profile"><img src="images/TEAM-AI-LEGENDS-LOGO.png" class="team-logo" alt="Team AI Legends Logo"></a>
+                    </div>
+                </div>
+                
+                <!-- VS Indicator -->
+                <div class="col-md-2">
+                    <div class="vs">VS</div>
+                </div>
+
+                <!-- Team NextGen Heroes -->
+                <div class="col-md-5">
+                    <div class="glass p-4">
+                        <img src="images/TEAM-NEXTGEN-HEROES-LOGO.png" class="team-logo" alt="Team NextGen Heroes Logo">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Countdown Timer -->
+            <h2 class="mt-5">Countdown to OXORD Anniversary & Announcement of Winners</h2>
+<div id="countdown" class="d-flex justify-content-center gap-3 mt-3">
+    <div class="glass p-3"><h2 id="d">00</h2><small>Days</small></div>
+    <div class="glass p-3"><h2 id="h">00</h2><small>Hours</small></div>
+    <div class="glass p-3"><h2 id="m2">00</h2><small>Minutes</small></div>
+    <div class="glass p-3"><h2 id="s">00</h2><small>Seconds</small></div>
+</div>
+
+            <a class="btn btn-volt btn-lg mt-4" href="#">Register Now</a>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="container py-5">
+        <h2 class="section-title mb-4">Latest News</h2>
+        <div class="row g-3">
+            <div class="col-md-4">
+    <div class="cardx">
+        <h5>Sportsfest Kickoff</h5>
+        <p>The games officially begin next week on Monday, August 10, 2026. Get ready!</p>
+    </div>
+</div>	
+            <div class="col-md-4">
+                <div class="cardx">
+                    <h5>Team Registration</h5>
+                    <p>Registration for AI Legends and NextGen Heroes is now open.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cardx">
+                    <h5>Contest Updates</h5>
+                    <p>Watch for schedules of OXORD Got Talent and competitions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Navigation Section -->
+    <section id="quick" class="container py-5">
+        <h2 class="section-title mb-4">Quick Navigation</h2>
+        <div class="row g-3">
+             <div class="col-md-3">
+                <a href="sports.html"><div class="cardx text-center">
+                    <i class="bi bi-trophy fs-1"></i>
+                   <h5 class="mt-2">Sports</h5>
+                </div></a>
+            </div>
+            <div class="col-md-3">
+                <div class="cardx text-center">
+                    <i class="bi bi-stars fs-1"></i>
+                    <h5 class="mt-2">Activities</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="cardx text-center">
+                    <i class="bi bi-mic fs-1"></i>
+                    <h5 class="mt-2">Got Talent</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="cardx text-center">
+                    <i class="bi bi-calendar-event fs-1"></i>
+                    <h5 class="mt-2">Schedule</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <p class="mb-1">SPORTSFEST 2026 - SEASON IV</p>
+        <p class="">Play with Passion • Innovate with Technology • Win with Integrity</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+    const target = new Date("2026-10-31T08:00:00");
+    setInterval(() => {
+        const now = new Date();
+        let diff = target - now;
+        if (diff < 0) diff = 0;
+        
+        let d = Math.floor(diff / 86400000);
+        let h = Math.floor((diff % 86400000) / 3600000);
+        let m = Math.floor((diff % 3600000) / 60000);
+        let s = Math.floor((diff % 60000) / 1000);
+        
+        document.getElementById('d').innerText = d;
+        document.getElementById('h').innerText = h;
+        document.getElementById('m2').innerText = m;
+        document.getElementById('s').innerText = s;
+    }, 1000);
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
