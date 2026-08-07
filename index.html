@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OXORD SPORTFEST 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Disable right click globally
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030a0d;
+            color: #d1f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .poster-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            padding: 2.5rem;
+            border-radius: 2rem;
+            background: linear-gradient(135deg, rgba(16, 32, 40, 0.7) 0%, rgba(10, 20, 25, 0.7) 100%);
+            border: 2px solid #00f0ff;
+            box-shadow: 0 0 40px rgba(0, 240, 255, 0.5), inset 0 0 10px rgba(0, 240, 255, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .header-glow {
+            animation: pulse-glow 2s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            from { text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff; }
+            to { text-shadow: 0 0 15px #00f0ff, 0 0 25px #00f0ff; }
+        }
+
+        .neon-text {
+            text-shadow: 0 0 7px #00f0ff, 0 0 15px #00f0ff;
+        }
+        .text-neon-teal {
+            color: #00e5e5;
+        }
+        .glow-border {
+            position: relative;
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 1rem;
+            padding: 1rem;
+            background: rgba(0, 20, 25, 0.5);
+            overflow: hidden;
+        }
+        .glow-border::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: radial-gradient(circle, rgba(0, 240, 255, 0.7) 0%, transparent 70%);
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.5;
+            animation: border-glow 4s infinite linear;
+        }
+
+        @keyframes border-glow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(0deg, transparent 95%, rgba(0, 240, 255, 0.1) 100%),
+                              linear-gradient(90deg, transparent 95%, rgba(0, 240, 255, 0.1) 100%);
+            background-size: 20px 20px;
+            pointer-events: none;
+            z-index: -2;
+            opacity: 0.5;
+        }
+
+        .circuit {
+            position: absolute;
+            opacity: 0.1;
+            z-index: -1;
+            filter: blur(1px);
+        }
+        .circuit-top { top: 5%; left: 10%; width: 15%; animation: circuit-animate 10s infinite ease-in-out; }
+        .circuit-bottom { bottom: 5%; right: 10%; width: 20%; animation: circuit-animate 12s infinite ease-in-out reverse; }
+        @keyframes circuit-animate {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        .section-header {
+            position: relative;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .section-header::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #00f0ff, rgba(0, 240, 255, 0.2));
+            box-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff;
+        }
+
+        .icon-glow {
+            text-shadow: 0 0 5px #00e5e5;
+        }
+
+    </style>
+</head>
+<body class="bg-[#030a0d] text-white">
+
+    <div class="grid-bg"></div>
+
+    <!-- Circuit patterns as SVG for the background -->
+    <svg class="circuit circuit-top" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 50L25 50M25 50L50 25L75 50L50 75L25 50Z" stroke="#00e5e5" stroke-width="2"/>
+        <circle cx="50" cy="50" r="5" fill="#00e5e5"/>
+    </svg>
+    <svg class="circuit circuit-bottom" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 50L95 50" stroke="#00e5e5" stroke-width="2"/>
+        <circle cx="5" cy="50" r="2" fill="#00e5e5"/>
+        <circle cx="95" cy="50" r="2" fill="#00e5e5"/>
+        <circle cx="50" cy="50" r="5" fill="#00e5e5"/>
+        <path d="M50 50L70 30M50 50L30 30" stroke="#00e5e5" stroke-width="2"/>
+    </svg>
+
+    <div class="poster-container">
+
+
+<!-- Header -->
+        <header class="text-center mb-6">
+  <div class="flex items-center justify-center gap-6">
+    <!-- Left Logo -->
+    <img src="OXORD 15.png" alt="OXORD 15 Logo" class="h-24 w-auto">
+
+    <!-- Title Text -->
+    <h2 class="text-5xl font-extrabold tracking-tight neon-text uppercase leading-none">
+      <span class="text-neon-teal">SPORTFEST</span>
+      <span class="text-white">2025</span>
+    </h2>
+
+    <!-- Right Logo -->
+    <img src="OXORD 15 Sub logo.png" alt="OXORD 15 Sub Logo" class="h-24 w-auto">
+  </div>
+</header>
+
+        <!-- 🔔 Fair Contest Announcement -->
+ 
+    <header class="text-center mb-4">
+      <h1 class="text-3xl font-bold header-glow mb-2">📢 ANNOUNCEMENT</h1>
+      
+    </header>
+    <div class="glow-border text-center space-y-4 p-6 rounded-lg">
+      <p class="text-lg text-gray-200">
+        To all participants:
+      </p>
+      <p class="text-base text-gray-300 leading-relaxed">
+        We would like to remind everyone that this is a fair contest. 
+        Therefore, it is strictly prohibited for facilitators or any skilled 
+        individuals outside the team to assist in creating layouts, editing 
+        videos, or completing other tasks that may give unfair advantage to any group.
+      </p>
+      <p class="text-base text-gray-300 leading-relaxed">
+        This contest is meant to highlight your own creativity, teamwork, and effort. 
+        Winning will be far more meaningful when it comes from your own hands and ideas. 
+        Let us uphold the values of <span class="text-neon-teal">fairness, integrity, and honesty</span> throughout this event.
+      </p>
+      <blockquote class="italic text-neon-teal font-semibold">
+        "And whatsoever ye do, do it heartily, as to the Lord, and not unto men; 
+        Knowing that of the Lord ye shall receive the reward of the inheritance: 
+        for ye serve the Lord Christ."<br>
+        — Colossians 3:23-24 (KJV)
+      </blockquote>
+      <p class="text-base text-gray-300 leading-relaxed">
+        ▲ Remember: God sees everything you do. You may hide from people, but you can never hide from Him.
+      </p>
+      <p class="text-lg font-bold text-white">
+        Your own work will always be more rewarding, and the joy of creating something 
+        with your own effort is far greater than relying on others.
+      </p>
+      <p class="text-xl text-neon-teal font-extrabold">
+        ✨ Let’s keep the spirit of fairness alive and make this contest a true celebration of talent and teamwork!
+      </p>
+    </div>
+
+    <!-- 🎉 Contest List Section -->
+  <div class="poster-container mt-10">
+    <h2 class="text-2xl font-bold text-center text-neon-teal mb-6">🎉 List of Contests</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Video Competition -->
+      <div class="bg-[#06141a] border border-cyan-400 rounded-xl shadow-lg p-4 hover:scale-105 transition">
+        <img src="OXORD 15.png" alt="Video Competition" class="rounded-lg mb-4">
+        <h3 class="text-xl font-bold text-white mb-2">Video Competition</h3>
+        <a href="Video-Contest.html" target="_blank" class="inline-block bg-cyan-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-cyan-400">
+          View Details
+        </a>
+      </div>
+
+      <!-- Cosplay Competition -->
+      <div class="bg-[#06141a] border border-cyan-400 rounded-xl shadow-lg p-4 hover:scale-105 transition">
+        <img src="OXORD 15.png" alt="Cosplay Competition" class="rounded-lg mb-4">
+        <h3 class="text-xl font-bold text-white mb-2">Cosplay Competition</h3>
+        <a href="Underconstruction.html" target="_blank" class="inline-block bg-cyan-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-cyan-400">
+          View Details
+        </a>
+      </div>
+
+      <!-- Bowling Tournament -->
+      <div class="bg-[#06141a] border border-cyan-400 rounded-xl shadow-lg p-4 hover:scale-105 transition">
+        <img src="OXORD 15.png" alt="Bowling Tournament" class="rounded-lg mb-4">
+        <h3 class="text-xl font-bold text-white mb-2">Bowling Tournament</h3>
+        <a href="Underconstruction.html" target="_blank" class="inline-block bg-cyan-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-cyan-400">
+          View Details
+        </a>
+      </div>
+
+      <!-- Basketball Tournament -->
+      <div class="bg-[#06141a] border border-cyan-400 rounded-xl shadow-lg p-4 hover:scale-105 transition">
+        <img src="OXORD 15.png" alt="Basketball Tournament" class="rounded-lg mb-4">
+        <h3 class="text-xl font-bold text-white mb-2">Basketball Tournament</h3>
+        <a href="Underconstruction.html" target="_blank" class="inline-block bg-cyan-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-cyan-400">
+          View Details
+        </a>
+      </div>
+
+      <!-- Volleyball Tournament -->
+      <div class="bg-[#06141a] border border-cyan-400 rounded-xl shadow-lg p-4 hover:scale-105 transition">
+        <img src="OXORD 15.png" alt="Volleyball Tournament" class="rounded-lg mb-4">
+        <h3 class="text-xl font-bold text-white mb-2">Volleyball Tournament</h3>
+        <a href="Underconstruction.html" target="_blank" class="inline-block bg-cyan-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-cyan-400">
+          View Details
+        </a>
+      </div>
+      <!-- Flood Likes -->
+      <div class="bg-[#06141a] border border-cyan-400 rounded-xl shadow-lg p-4 hover:scale-105 transition">
+        <img src="OXORD 15.png" alt="Volleyball Tournament" class="rounded-lg mb-4">
+        <h3 class="text-xl font-bold text-white mb-2">Flood Like Contest</h3>
+        <a href="Underconstruction.html" target="_blank" class="inline-block bg-cyan-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-cyan-400">
+          View Details
+        </a>
+      </div>
+      <!-- Badminton Tournament -->
+      <div class="bg-[#06141a] border border-cyan-400 rounded-xl shadow-lg p-4 hover:scale-105 transition">
+        <img src="OXORD 15.png" alt="Volleyball Tournament" class="rounded-lg mb-4">
+        <h3 class="text-xl font-bold text-white mb-2">Badminton Tournament</h3>
+        <a href="Underconstruction.html" target="_blank" class="inline-block bg-cyan-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-cyan-400">
+          View Details
+        </a>
+      </div>
+      <!-- Chess Tournament -->
+      <div class="bg-[#06141a] border border-cyan-400 rounded-xl shadow-lg p-4 hover:scale-105 transition">
+        <img src="OXORD 15.png" alt="Volleyball Tournament" class="rounded-lg mb-4">
+        <h3 class="text-xl font-bold text-white mb-2">Chess Tournament</h3>
+        <a href="Underconstruction.html" target="_blank" class="inline-block bg-cyan-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-cyan-400">
+          View Details
+        </a>
+      </div>
+      <!-- Poetry Contest -->
+      <div class="bg-[#06141a] border border-cyan-400 rounded-xl shadow-lg p-4 hover:scale-105 transition">
+        <img src="OXORD 15.png" alt="Volleyball Tournament" class="rounded-lg mb-4">
+        <h3 class="text-xl font-bold text-white mb-2">Poetry Contest</h3>
+        <a href="Underconstruction.html" target="_blank" class="inline-block bg-cyan-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-cyan-400">
+          View Details
+        </a>
+      </div>
+      <!-- Jingle Contest -->
+      <div class="bg-[#06141a] border border-cyan-400 rounded-xl shadow-lg p-4 hover:scale-105 transition">
+        <img src="OXORD 15.png" alt="Volleyball Tournament" class="rounded-lg mb-4">
+        <h3 class="text-xl font-bold text-white mb-2">Jingle Contest</h3>
+        <a href="Underconstruction.html" target="_blank" class="inline-block bg-cyan-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-cyan-400">
+          View Details
+        </a>
+      </div>
+      <!-- Poster Making Contest -->
+      <div class="bg-[#06141a] border border-cyan-400 rounded-xl shadow-lg p-4 hover:scale-105 transition">
+        <img src="OXORD 15.png" alt="Volleyball Tournament" class="rounded-lg mb-4">
+        <h3 class="text-xl font-bold text-white mb-2">Poster Making Contest</h3>
+        <a href="Underconstruction.html" target="_blank" class="inline-block bg-cyan-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-cyan-400">
+          View Details
+        </a>
+      </div>
+    </div>
+  </div>
+
+    </div>
+</body>
+</html>
