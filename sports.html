@@ -325,3 +325,31 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+<script>
+  // 1. I-disable ang Right-Click Context Menu
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // 2. I-disable ang Inspect Element Shortcuts at View Source
+  document.addEventListener('keydown', function(e) {
+    // I-disable ang F12
+    if (e.key === "F12") {
+      e.preventDefault();
+    }
+    // I-disable ang Ctrl+Shift+I (Inspect)
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+      e.preventDefault();
+    }
+    // I-disable ang Ctrl+Shift+J (Console)
+    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+      e.preventDefault();
+    }
+    // I-disable ang Ctrl+U (View Source)
+    if (e.ctrlKey && e.key === 'u') {
+      e.preventDefault();
+    }
+  });
+</script>
