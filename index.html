@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPORTSFEST 2026 - Season IV</title>
+    
+    <!-- External CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Advanced Futuristic Stylesheet -->
+    <style>
+        :root {
+            --bg-deep: #01080a;
+            --bg-card: rgba(8, 34, 38, 0.85);
+            --border-glow: rgba(0, 255, 255, 0.4);
+            --neon-teal: #00ffff;
+            --neon-volt: #ccff00;
+            --text-main: #f0f4f5;
+            --text-muted: #b0c4de;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(0, 255, 255, 0.12), transparent 45%),
+                radial-gradient(circle at 85% 85%, rgba(204, 255, 0, 0.1), transparent 45%),
+                linear-gradient(135deg, #01080a, #031b20, #062e35);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* Navbar Cyber Glass */
+        .navbar-cyber {
+            background: rgba(1, 8, 10, 0.9) !important;
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar-brand {
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: var(--neon-volt) !important;
+            text-shadow: 0 0 12px rgba(204, 255, 0, 0.5);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-main) !important;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--neon-teal) !important;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: transparent;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        /* High Visibility Holographic Cards */
+        .glass {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glow);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .glass:hover {
+            border-color: var(--neon-volt);
+            box-shadow: 0 0 30px rgba(204, 255, 0, 0.3), inset 0 0 20px rgba(0, 255, 255, 0.15);
+        }
+
+        .team-logo {
+            width: 160px;
+            height: 160px;
+            object-fit: contain;
+            animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.4));
+        }
+
+        @keyframes float {
+            50% { transform: translateY(-10px); }
+        }
+
+        .vs {
+            font-size: 75px;
+            font-weight: 900;
+            color: var(--neon-volt);
+            text-shadow: 0 0 25px var(--neon-volt), 0 0 50px rgba(204, 255, 0, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            50% { transform: scale(1.1); text-shadow: 0 0 40px var(--neon-volt); }
+        }
+
+        /* Futuristic Action Button */
+        .btn-volt {
+            background: transparent;
+            color: var(--neon-volt);
+            border: 2px solid var(--neon-volt);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 14px 35px;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: color 0.4s ease;
+            box-shadow: 0 0 15px rgba(204, 255, 0, 0.2);
+        }
+
+        .btn-volt::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--neon-volt);
+            z-index: -1;
+            transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .btn-volt:hover {
+            color: #01080a;
+            box-shadow: 0 0 30px rgba(204, 255, 0, 0.7);
+        }
+
+        .btn-volt:hover::before {
+            width: 100%;
+        }
+
+        .section-title {
+            color: var(--neon-volt);
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(204, 255, 0, 0.4);
+        }
+
+        /* Cyber Cards with Clear Text */
+        .cardx {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glow);
+            border-radius: 20px;
+            padding: 25px;
+            height: 100%;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .cardx:hover {
+            transform: translateY(-6px);
+            border-color: var(--neon-volt);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+        }
+
+        .cardx h5 {
+            color: var(--neon-teal);
+            font-weight: 800;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+        }
+
+        .cardx p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .cardx i {
+            color: var(--neon-volt);
+            filter: drop-shadow(0 0 12px rgba(204, 255, 0, 0.5));
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        footer {
+            background: #000405;
+            border-top: 1px solid rgba(0, 255, 255, 0.1);
+        }
+
+        /* Countdown Custom Layout */
+        #countdown div {
+            min-width: 95px;
+        }
+
+        #countdown h2 {
+            color: var(--neon-teal);
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+            font-weight: 900;
+        }
+
+        #countdown small {
+            color: var(--text-muted) !important;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-cyber sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">SPORTSFEST 2026 - SEASON IV</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item"><a class="nav-link px-3 active" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="sports.html">SPORTS</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="activities.html">ACTIVITIES</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="oxord-got-talent.html">OXORD GOT TALENT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center">
+        <div class="container text-center">
+            <img src="images/OXORD-SPORTSFEST-2026-LOGO.png" class="img-fluid mb-3" style="max-width: 520px; filter: drop-shadow(0 0 25px rgba(0,255,255,0.3));" alt="Sportsfest 2026 Logo">
+
+            <div class="row align-items-center mt-5">
+                <!-- Team AI Legends -->
+                <div class="col-md-5">
+                    <div class="glass p-4">
+                        <a href="https://github.com/settings/profile">
+                            <img src="TEAM-AI-LEGENDS-LOGO.png" class="team-logo" alt="Team AI Legends Logo">
+                        </a>
+                        <h4 class="mt-3 fw-bold" style="color: var(--neon-teal); text-shadow: 0 0 12px rgba(0,255,255,0.5);">TEAM AI LEGENDS</h4>
+                        <p class="text-muted mb-0">Neural Tech Division</p>
+                    </div>
+                </div>
+                
+                <!-- VS Indicator -->
+                <div class="col-md-2 my-3 my-md-0">
+                    <div class="vs">VS</div>
+                </div>
+
+                <!-- Team NextGen Heroes -->
+                <div class="col-md-5">
+                    <div class="glass p-4">
+                        <img src="TEAM-NEXTGEN-HEROES-LOGO.png" class="team-logo" alt="Team NextGen Heroes Logo">
+                        <h4 class="mt-3 fw-bold" style="color: var(--neon-volt); text-shadow: 0 0 12px rgba(204,255,0,0.5);">TEAM NEXTGEN HEROES</h4>
+                        <p class="text-muted mb-0">Quantum Volt Division</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Countdown Timer -->
+            <h2 class="mt-5 text-white fw-bold" style="letter-spacing: 1px; text-shadow: 0 0 10px rgba(255,255,255,0.3);">Countdown to OXORD Anniversary & Announcement of Winners</h2>
+            <div id="countdown" class="d-flex justify-content-center gap-3 mt-3">
+                <div class="glass p-3"><h2 id="d">00</h2><small class="text-uppercase">Days</small></div>
+                <div class="glass p-3"><h2 id="h">00</h2><small class="text-uppercase">Hours</small></div>
+                <div class="glass p-3"><h2 id="m2">00</h2><small class="text-uppercase">Minutes</small></div>
+                <div class="glass p-3"><h2 id="s">00</h2><small class="text-uppercase">Seconds</small></div>
+            </div>
+
+            <!-- Dual Registration Action Buttons -->
+            <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
+                <a class="btn btn-volt btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSecyi9Pw2Bh8B4GALi7I2JXIY7h687vTC-DJrkx3GZCyXwNcw/viewform?usp=publish-editor">Register for Captain</a>
+                <a class="btn btn-volt btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdqwbHJezuKFYjKOBhVjihwh7v_b_oHcl4cYRrI65h1BfTLww/viewform?usp=publish-editor">Register for Employee</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="container py-5">
+        <h2 class="section-title mb-4">Latest News</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="cardx">
+                    <h5>Sportsfest Kickoff</h5>
+                    <p class="mt-2">The games officially begin next week on Monday, August 10, 2026. Get ready!</p>
+                </div>
+            </div>    
+            <div class="col-md-4">
+                <div class="cardx">
+                    <h5>Team Registration</h5>
+                    <p class="mt-2">Registration for AI Legends and NextGen Heroes is now open.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cardx">
+                    <h5>Contest Updates</h5>
+                    <p class="mt-2">Watch for schedules of OXORD Got Talent and competitions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Navigation Section -->
+    <section id="quick" class="container py-5 mb-4">
+        <h2 class="section-title mb-4">Quick Navigation</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <a href="sports.html">
+                    <div class="cardx text-center">
+                        <i class="bi bi-trophy fs-1"></i>
+                        <h5 class="mt-3 mb-0" style="color: var(--neon-volt);">Sports</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="Activities.html">
+                <div class="cardx text-center">
+                    <i class="bi bi-stars fs-1"></i>
+                    <h5 class="mt-3 mb-0" style="color: var(--neon-volt);">Activities</h5>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-3">
+                <a href="oxord-got-talent.html">
+                <div class="cardx text-center">
+                    <i class="bi bi-mic fs-1"></i>
+                    <h5 class="mt-3 mb-0" style="color: var(--neon-volt);">OXORD Got Talent</h5>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-3">
+                <div class="cardx text-center">
+                    <i class="bi bi-calendar-event fs-1"></i>
+                    <h5 class="mt-3 mb-0" style="color: var(--neon-volt);">Schedule</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <p class="mb-1 text-white fw-bold tracking-wide">SPORTSFEST 2026 - SEASON IV</p>
+        <p class="small mb-0" style="color: var(--text-muted);">Play with Passion • Innovate with Technology • Win with Integrity</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        const target = new Date("2026-10-31T08:00:00");
+        setInterval(() => {
+            const now = new Date();
+            let diff = target - now;
+            if (diff < 0) diff = 0;
+            
+            let d = Math.floor(diff / 86400000);
+            let h = Math.floor((diff % 86400000) / 3600000);
+            let m = Math.floor((diff % 3600000) / 60000);
+            let s = Math.floor((diff % 60000) / 1000);
+            
+            document.getElementById('d').innerText = d;
+            document.getElementById('h').innerText = h;
+            document.getElementById('m2').innerText = m;
+            document.getElementById('s').innerText = s;
+        }, 1000);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
