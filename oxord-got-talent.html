@@ -193,6 +193,7 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            cursor: pointer;
         }
 
         .btn-view-criteria:hover {
@@ -326,9 +327,14 @@
                                     <td><span class="text-white fw-bold">Hosting or Public Speaking Contest</span></td>
                                     <td>Communication & Presentation</td>
                                     <td class="text-center">
-                                        <span class="btn-criteria-disabled">
-                                            <i class="bi bi-slash-circle"></i> Criteria not uploaded Yet
-                                        </span>
+                                        <button class="btn-view-criteria" data-bs-toggle="modal" data-bs-target="#criteriaModal"
+                                            data-title="Hosting or Public Speaking Contest"
+                                            data-category="Communication & Presentation"
+                                            data-mechanics='["To develop and showcase employees&apos; confidence, communication skills, and stage presence by delivering clear, organized, and engaging speeches with professionalism and confidence.", "2 Participants per team", "Speech duration: 3–5 minutes.", "Participants shall choose one (1) topic from the list provided by the committee.", "The speech must be original and delivered in English, Filipino, or a combination of both.", "Participants should introduce themselves before delivering their speech.", "The speech should have a clear introduction, body, and conclusion.", "The use of visual aids or props is optional but not required."]'
+                                            data-topics='["Participants may choose one (1) of the following topics:", "1. The Importance of Excellent Customer Service", "2. Leadership Begins with Character", "3. Teamwork: The Key to Organizational Success", "4. The Value of Integrity in the Workplace", "5. Building a Positive Work Environment", "6. The Importance of Effective Communication", "7. Innovation and Continuous Improvement", "8. Time Management for Better Productivity", "9. Professionalism in the Workplace", "10. Overcoming Challenges with a Positive Mindset", "11. The Role of Technology in Business Growth", "12. Why Customer Satisfaction Matters", "13. The Power of Goal Setting", "14. Work Ethics: Doing the Right Thing Even When No One Is Watching", "15. Becoming a Better Version of Yourself"]'
+                                            data-criteria='[{"criterion": "Delivery & Confidence", "percentage": "35%"}, {"criterion": "Clarity & Organization", "percentage": "35%"}, {"criterion": "Voice & Pronunciation", "percentage": "15%"}, {"criterion": "Overall Impression", "percentage": "15%"}]'>
+                                            <i class="bi bi-eye"></i> View Criteria
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -336,9 +342,15 @@
                                     <td><span class="text-white fw-bold">Live Selling Video Contest</span></td>
                                     <td>Digital Marketing & Sales</td>
                                     <td class="text-center">
-                                        <span class="btn-criteria-disabled">
-                                            <i class="bi bi-slash-circle"></i> Criteria not uploaded Yet
-                                        </span>
+                                        <button class="btn-view-criteria" data-bs-toggle="modal" data-bs-target="#criteriaModal"
+                                            data-title="Live Selling Video Contest"
+                                            data-category="Digital Marketing & Sales"
+                                            data-mechanics='["To evaluate the participant&apos;s ability to confidently present a product, explain its features and benefits, persuade customers to buy, and engage with the audience as if conducting a live online selling session.", "2 participants each team", "Presentation time is 3–5 minutes", "Each participant or pair will be assigned an OXORD product before the competition.", "Participants must conduct a simulated live selling session, similar to a Facebook Live, TikTok Live, or online selling broadcast.", "The presentation should be natural, energetic, and customer-friendly."]'
+                                            data-participants-guidelines='["Introduce themselves and welcome the viewers.", "Introduce the assigned product.", "Explain the product&apos;s features, specifications, and benefits.", "Highlight why customers should choose the product.", "Mention any available promotions, discounts, or freebies (if provided by the committee).", "Demonstrate how the product works, if applicable.", "Use effective selling techniques and provide a strong call to action before ending the presentation.", "Participants may use the actual product, product photos, or presentation materials provided by the committee"]'
+                                            data-topics='["Suggested Flow:", "1. Greeting and self-introduction", "2. Welcome the viewers", "3. Introduce the product", "4. Explain the product features and benefits", "5. Demonstrate the product (if applicable)", "6. Share promotions or special offers", "7. Invite customers to purchase", "8. Closing message and thank the audience"]'
+                                            data-criteria='[{"criterion": "Product Knowledge (Accuracy in explaining the product&apos;s features, functions, and benefits)", "percentage": "30%"}, {"criterion": "Selling Technique (Persuasiveness, confidence, product presentation, and closing skills)", "percentage": "30%"}, {"criterion": "Communication Skills (Clear voice, confidence, fluency, and professionalism)", "percentage": "20%"}, {"criterion": "Creativity (Presentation style, enthusiasm, and originality)", "percentage": "10%"}, {"criterion": "Presentation Management (Organization, smooth flow, time management, camera presence, and overall professionalism of the video presentation)", "percentage": "10%"}]'>
+                                            <i class="bi bi-eye"></i> View Criteria
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -346,9 +358,15 @@
                                     <td><span class="text-white fw-bold">Unboxing Video Contest</span></td>
                                     <td>Multimedia & Product Showcase</td>
                                     <td class="text-center">
-                                        <span class="btn-criteria-disabled">
-                                            <i class="bi bi-slash-circle"></i> Criteria not uploaded Yet
-                                        </span>
+                                        <button class="btn-view-criteria" data-bs-toggle="modal" data-bs-target="#criteriaModal"
+                                            data-title="Unboxing Video Contest"
+                                            data-category="Multimedia & Product Showcase"
+                                            data-mechanics='["To evaluate the participant&apos;s ability to professionally introduce and present a product through an engaging unboxing video. Participants are expected to explain the product&apos;s contents, features, specifications, and first impressions with confidence and clarity.", "3 participants each team", "Presentation time is 4–6 minutes.", "Each participant will be assigned an OXORD product by the committee.", "Participants will create a professional unboxing presentation as if reviewing a newly purchased product.", "The presentation should be clear, organized, and informative"]'
+                                            data-participants-guidelines='["Introduce themselves and the assigned product.", "Show the product packaging and discuss its appearance.", "Carefully unbox the product while explaining each step.", "Present all items included inside the package.", "Explain the product&apos;s features, specifications, functions, and accessories.", "Share their first impressions of the product, including its design, build quality, and usability.", "Highlight the product&apos;s benefits and possible uses.", "End with a short summary and recommendation.", "Participants may demonstrate the product if applicable.", "The presentation must be honest, professional, and well-organized"]'
+                                            data-topics='["Suggested Flow:", "1. Greeting and self-introduction", "2. Introduce the assigned product", "3. Show the product packaging", "4. Unbox the product carefully", "5. Present the package contents and accessories", "6. Explain the product&apos;s features, specifications, and functions", "7. Share first impressions and product benefits", "8. Give a short recommendation", "9. Closing remarks"]'
+                                            data-criteria='[{"criterion": "Product Presentation (Professional presentation of the product, packaging, contents, and overall demonstration)", "percentage": "35%"}, {"criterion": "Communication Skills (Clear voice, confidence, fluency, and professionalism while presenting)", "percentage": "25%"}, {"criterion": "Creativity (Presentation style, enthusiasm, originality, and ability to make the presentation engaging)", "percentage": "15%"}, {"criterion": "Accuracy of Information (Correct explanation of the product&apos;s features, specifications, functions, and accessories)", "percentage": "15%"}, {"criterion": "Overall Delivery (Organization, smooth flow, time management, camera presence, and overall quality of the presentation)", "percentage": "10%"}]'>
+                                            <i class="bi bi-eye"></i> View Criteria
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -356,9 +374,15 @@
                                     <td><span class="text-white fw-bold">Customer Satisfaction Showcase</span></td>
                                     <td>Customer Experience & Roleplay</td>
                                     <td class="text-center">
-                                        <span class="btn-criteria-disabled">
-                                            <i class="bi bi-slash-circle"></i> Criteria not uploaded Yet
-                                        </span>
+                                        <button class="btn-view-criteria" data-bs-toggle="modal" data-bs-target="#criteriaModal"
+                                            data-title="Customer Satisfaction Showcase"
+                                            data-category="Customer Experience & Roleplay"
+                                            data-mechanics='["To showcase the positive experiences of OXORD customers by highlighting the quality of service provided by the company. This category aims to demonstrate how excellent customer service, professionalism, and commitment to customer satisfaction build trust and long-term relationships with clients.", "Presentation duration is 5–10 minutes.", "Participants will create a video presentation featuring the customer satisfaction experience of an actual OXORD customer or a realistic customer service scenario.", "The presentation should clearly show how OXORD provided excellent service and how the customer&apos;s needs or concerns were addressed.", "Participants may use one or more of the following presentation formats: ✓Customer interview ✓Customer testimonial ✓Role-playing of a customer service experience ✓Short documentary-style video ✓Before-and-after service presentation", "The presentation should include: ✓A brief introduction of the customer or situation. ✓The customer&apos;s concern, need, or problem. ✓How OXORD staff assisted and resolved the concern. ✓The customer&apos;s feedback or satisfaction after receiving the service. ✓The value of excellent customer service and why customers choose OXORD.", "The presentation should be professional, organized, and easy to understand.", "Participants may use photos, videos, interviews, product demonstrations, or other visual materials to support their presentation.", "Note: The goal of this category is to highlight real or realistic customer experiences that demonstrate OXORD&apos;s commitment to quality service. Presentations should focus on how excellent customer care creates trust, satisfaction, and lasting relationships with customers"]'
+                                            data-participants-guidelines='["A brief introduction of the customer or situation.", "The customer&apos;s concern, need, or problem.", "How OXORD staff assisted and resolved the concern.", "The customer&apos;s feedback or satisfaction after receiving the service.", "The value of excellent customer service and why customers choose OXORD."]'
+                                            data-topics='["Suggested Flow:", "1. Introduction of the participant(s) and customer", "2. Introduce the customer or service experience", "3. Explain the customer&apos;s concern or need", "4. Show how OXORD provided the service", "5. Present the customer&apos;s feedback or testimonial", "6. Highlight what made the service excellent", "7. Share the impact of the service on the customer", "8. Closing message about OXORD&apos;s commitment to customer satisfaction"]'
+                                            data-criteria='[{"criterion": "Customer Service Quality (Demonstrates how OXORD provided excellent service, solved customer concerns, and achieved customer satisfaction.)", "percentage": "35%"}, {"criterion": "Storytelling & Content (Clear, organized, and meaningful presentation of the customer&apos;s experience and service journey.)", "percentage": "25%"}, {"criterion": "Professionalism (Confidence, communication, proper appearance, and overall quality of the presentation.)", "percentage": "20%"}, {"criterion": "Creativity (Originality, presentation style, video editing, and effective use of visuals.)", "percentage": "10%"}, {"criterion": "Overall Impact (The presentation&apos;s ability to inspire confidence, showcase OXORD&apos;s service excellence, and leave a positive impression on the audience.)", "percentage": "10%"}]'>
+                                            <i class="bi bi-eye"></i> View Criteria
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -366,7 +390,7 @@
                                     <td><span class="text-white fw-bold">Singing (Hymnal or Christian Song for Solo and Quartet)</span></td>
                                     <td>Vocal Arts & Harmony</td>
                                     <td class="text-center">
-                                        <span class="btn-criteria-disabled">
+                                        <span class="btn-criteria-disabled" style="color: var(--text-muted); font-size: 0.8rem;">
                                             <i class="bi bi-slash-circle"></i> Criteria not uploaded Yet
                                         </span>
                                     </td>
@@ -376,7 +400,7 @@
                                     <td><span class="text-white fw-bold">Poster Making Contest</span></td>
                                     <td>Visual Arts & Graphic Design</td>
                                     <td class="text-center">
-                                        <span class="btn-criteria-disabled">
+                                        <span class="btn-criteria-disabled" style="color: var(--text-muted); font-size: 0.8rem;">
                                             <i class="bi bi-slash-circle"></i> Criteria not uploaded Yet
                                         </span>
                                     </td>
@@ -386,7 +410,7 @@
                                     <td><span class="text-white fw-bold">Spoken Poetry</span></td>
                                     <td>Literary & Performance Arts</td>
                                     <td class="text-center">
-                                        <span class="btn-criteria-disabled">
+                                        <span class="btn-criteria-disabled" style="color: var(--text-muted); font-size: 0.8rem;">
                                             <i class="bi bi-slash-circle"></i> Criteria not uploaded Yet
                                         </span>
                                     </td>
@@ -396,7 +420,7 @@
                                     <td><span class="text-white fw-bold">Instrumental Talent Showcase</span></td>
                                     <td>Musical Instrumental Arts</td>
                                     <td class="text-center">
-                                        <span class="btn-criteria-disabled">
+                                        <span class="btn-criteria-disabled" style="color: var(--text-muted); font-size: 0.8rem;">
                                             <i class="bi bi-slash-circle"></i> Criteria not uploaded Yet
                                         </span>
                                     </td>
@@ -406,7 +430,7 @@
                                     <td><span class="text-white fw-bold">Digital Logo Design Contest</span></td>
                                     <td>Digital Graphics & Branding</td>
                                     <td class="text-center">
-                                        <span class="btn-criteria-disabled">
+                                        <span class="btn-criteria-disabled" style="color: var(--text-muted); font-size: 0.8rem;">
                                             <i class="bi bi-slash-circle"></i> Criteria not uploaded Yet
                                         </span>
                                     </td>
@@ -416,7 +440,7 @@
                                     <td><span class="text-white fw-bold">Voice of Oxord - Customer Service Edition</span></td>
                                     <td>Vocal Communication & Voiceover</td>
                                     <td class="text-center">
-                                        <span class="btn-criteria-disabled">
+                                        <span class="btn-criteria-disabled" style="color: var(--text-muted); font-size: 0.8rem;">
                                             <i class="bi bi-slash-circle"></i> Criteria not uploaded Yet
                                         </span>
                                     </td>
@@ -456,19 +480,31 @@
                         <ul id="modalMechanicsList"></ul>
                     </div>
 
+                    <!-- Participants Guidelines Section (Conditionally Displayed) -->
+                    <div class="mb-4 p-3 rounded" id="participantsSection" style="background: rgba(0, 255, 255, 0.03); border: 1px solid rgba(0, 255, 255, 0.15); display: none;">
+                        <p class="text-white fw-semibold mb-2"><i class="bi bi-people me-2" style="color: var(--neon-teal);"></i>The presentation should include:</p>
+                        <ul id="modalParticipantsList"></ul>
+                    </div>
+
+                    <!-- Speech Topics / Suggested Flow Section (Conditionally Displayed) -->
+                    <div class="mb-4 p-3 rounded" id="topicsSection" style="background: rgba(204, 255, 0, 0.03); border: 1px solid rgba(204, 255, 0, 0.2); display: none;">
+                        <p class="text-white fw-semibold mb-2" id="topicsHeaderLabel"><i class="bi bi-journal-text me-2" style="color: var(--neon-volt);"></i>Speech Topics:</p>
+                        <ul id="modalTopicsList" style="list-style-type: none; padding-left: 0;"></ul>
+                    </div>
+
                     <!-- Judging Criteria Table Section -->
                     <div class="p-3 rounded" style="background: rgba(204, 255, 0, 0.03); border: 1px solid rgba(204, 255, 0, 0.2);">
                         <p class="text-white fw-semibold mb-2"><i class="bi bi-clipboard-check me-2" style="color: var(--neon-volt);"></i>Judging Criteria Breakdown:</p>
                         <div class="table-responsive rounded">
                             <table class="table criteria-table align-middle">
                                <thead>
-                                   <tr>
-                                       <th>Criteria Description</th>
-                                       <th class="text-end" style="width: 120px;">Percentage</th>
-                                   </tr>
+                                    <tr>
+                                        <th>Criteria Description</th>
+                                        <th class="text-end" style="width: 120px;">Percentage</th>
+                                    </tr>
                                </thead>
                                <tbody id="modalCriteriaTableBody">
-                                   <!-- Dynamically Populated -->
+                                    <!-- Dynamically Populated -->
                                </tbody>
                             </table>
                         </div>
@@ -498,6 +534,8 @@
             const title = button.getAttribute('data-title');
             const category = button.getAttribute('data-category');
             const mechanicsJson = JSON.parse(button.getAttribute('data-mechanics'));
+            const participantsAttr = button.getAttribute('data-participants-guidelines');
+            const topicsAttr = button.getAttribute('data-topics');
             const criteriaJson = JSON.parse(button.getAttribute('data-criteria'));
             
             document.getElementById('modalTitle').textContent = title;
@@ -511,6 +549,60 @@
                 li.textContent = item;
                 mechanicsList.appendChild(li);
             });
+
+            // Populate Participants Guidelines Section Separately
+            const participantsSection = document.getElementById('participantsSection');
+            const participantsList = document.getElementById('modalParticipantsList');
+            participantsList.innerHTML = '';
+
+            if (participantsAttr) {
+                const participantsJson = JSON.parse(participantsAttr);
+                participantsSection.style.display = 'block';
+                participantsJson.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    participantsList.appendChild(li);
+                });
+            } else {
+                participantsSection.style.display = 'none';
+            }
+
+            // Populate Secondary List Section (Speech Topics or Suggested Flow) Separately
+            const topicsSection = document.getElementById('topicsSection');
+            const topicsList = document.getElementById('modalTopicsList');
+            const topicsHeaderLabel = document.getElementById('topicsHeaderLabel');
+            topicsList.innerHTML = '';
+
+            if (topicsAttr) {
+                const topicsJson = JSON.parse(topicsAttr);
+                topicsSection.style.display = 'block';
+                
+                // Dynamically adjust header title depending on event type
+                if (title.includes("Live Selling") || title.includes("Unboxing") || title.includes("Customer Satisfaction")) {
+                    topicsHeaderLabel.innerHTML = '<i class="bi bi-list-stars me-2" style="color: var(--neon-volt);"></i>Suggested Flow:';
+                } else {
+                    topicsHeaderLabel.innerHTML = '<i class="bi bi-journal-text me-2" style="color: var(--neon-volt);"></i>Speech Topics:';
+                }
+                
+                // First item is typically the instruction intro / header
+                if(topicsJson.length > 0) {
+                    const introP = document.createElement('p');
+                    introP.className = 'text-muted small mb-2';
+                    introP.textContent = topicsJson[0];
+                    topicsList.appendChild(introP);
+
+                    // Rest are the items
+                    for(let i = 1; i < topicsJson.length; i++) {
+                        const li = document.createElement('li');
+                        li.className = 'mb-1 small';
+                        li.style.color = 'var(--text-muted)';
+                        li.innerHTML = `<span style="color: var(--neon-volt); font-weight: 600;">${topicsJson[i]}</span>`;
+                        topicsList.appendChild(li);
+                    }
+                }
+            } else {
+                topicsSection.style.display = 'none';
+            }
             
             // Populate Criteria Table
             const criteriaTableBody = document.getElementById('modalCriteriaTableBody');
@@ -524,7 +616,6 @@
     </script>
 </body>
 </html>
-
 
 <script>
   // 1. I-disable ang Right-Click Context Menu
