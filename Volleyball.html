@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volleyball Lineup - SPORTSFEST 2026 - Season IV</title>
+    <title>Volleyball Lineup & Mechanics - SPORTSFEST 2026 - Season IV</title>
     
     <!-- External CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -107,6 +107,20 @@
             font-size: 0.95rem;
         }
 
+        .sport-icon-box {
+            width: 75px;
+            height: 75px;
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--neon-volt);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+        }
+
         .cyber-badge {
             background: rgba(0, 255, 255, 0.1);
             color: var(--neon-teal);
@@ -149,6 +163,31 @@
             border-color: var(--border-glow);
         }
 
+        /* Mechanics List Styling */
+        .cyber-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .cyber-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+            font-size: 1.05rem;
+        }
+
+        .cyber-list li::before {
+            content: "\F287";
+            font-family: "bootstrap-icons";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--neon-volt);
+            font-size: 1.1rem;
+            text-shadow: 0 0 8px rgba(204, 255, 0, 0.6);
+        }
+
         /* Futuristic Button */
         .btn-cyber {
             background: transparent;
@@ -164,6 +203,8 @@
             z-index: 1;
             transition: color 0.4s ease;
             box-shadow: 0 0 15px rgba(204, 255, 0, 0.2);
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-cyber::before {
@@ -220,13 +261,42 @@
     <header class="cyber-header text-center">
         <div class="container">
             <span class="cyber-badge mb-3 d-inline-block">Discipline Protocol // 02</span>
-            <h1 class="cyber-title display-4">Volleyball Rosters</h1>
-            <p class="mt-2" style="color: var(--text-muted);">Official player lineups for Team AI Legends and Team NextGen Heroes.</p>
+            <h1 class="cyber-title display-4">Volleyball Matrix & Rosters</h1>
+            <p class="mt-2" style="color: var(--text-muted);">Official competition rules, mechanics, and player lineups for Team AI Legends and Team NextGen Heroes.</p>
         </div>
     </header>
 
     <!-- Main Content Section -->
     <section class="container py-4 mb-5">
+        
+        <!-- Volleyball Mechanics & Rules Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="cyber-card">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="sport-icon-box">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="mb-1">Volleyball Competition Mechanics</h3>
+                            <span class="cyber-badge">Official Rules & Guidelines</span>
+                        </div>
+                    </div>
+                    <ul class="cyber-list">
+                        <li>Each team shall have a minimum of 12 players and a maximum of 15 players.</li>
+                        <li>Each team must have both male and female players.</li>
+                        <li>Each team shall have six (6) players on the court.</li>
+                        <li>Each team shall designate a Team Captain.</li>
+                        <li>The volleyball competition shall be played using a Best-of-5 sets format.</li>
+                        <li>The first team to win three (3) sets wins the match.</li>
+                        <li>A team must win a set by at least two (2) points.</li>
+                        <li>The 5th set, when necessary, shall be played up to 15 points, with a minimum two-point advantage.</li>
+                        <li>Players must wear appropriate sports attire and volleyball shoes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <div class="row g-4">
             
             <!-- Team AI Legends Roster -->
@@ -362,32 +432,31 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // 1. I-disable ang Right-Click Context Menu
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+
+      // 2. I-disable ang Inspect Element Shortcuts at View Source
+      document.addEventListener('keydown', function(e) {
+        // I-disable ang F12
+        if (e.key === "F12") {
+          e.preventDefault();
+        }
+        // I-disable ang Ctrl+Shift+I (Inspect)
+        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+          e.preventDefault();
+        }
+        // I-disable ang Ctrl+Shift+J (Console)
+        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+          e.preventDefault();
+        }
+        // I-disable ang Ctrl+U (View Source)
+        if (e.ctrlKey && e.key === 'u') {
+          e.preventDefault();
+        }
+      });
+    </script>
 </body>
 </html>
-
-<script>
-  // 1. I-disable ang Right-Click Context Menu
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
-
-  // 2. I-disable ang Inspect Element Shortcuts at View Source
-  document.addEventListener('keydown', function(e) {
-    // I-disable ang F12
-    if (e.key === "F12") {
-      e.preventDefault();
-    }
-    // I-disable ang Ctrl+Shift+I (Inspect)
-    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-      e.preventDefault();
-    }
-    // I-disable ang Ctrl+Shift+J (Console)
-    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-      e.preventDefault();
-    }
-    // I-disable ang Ctrl+U (View Source)
-    if (e.ctrlKey && e.key === 'u') {
-      e.preventDefault();
-    }
-  });
-</script>
