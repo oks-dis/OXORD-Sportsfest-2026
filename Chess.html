@@ -163,6 +163,30 @@
             border-color: var(--border-glow);
         }
 
+        /* Match Results Box Styles */
+        .match-score-board {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .match-card {
+            background: rgba(1, 8, 10, 0.6);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .match-card:hover {
+            border-color: var(--neon-teal);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+        }
+
         /* Mechanics List Styling */
         .cyber-list {
             list-style: none;
@@ -262,7 +286,7 @@
         <div class="container">
             <span class="cyber-badge mb-3 d-inline-block">Discipline Protocol // 04</span>
             <h1 class="cyber-title display-4">Chess Matrix & Rosters</h1>
-            <p class="mt-2" style="color: var(--text-muted);">Official competition rules, mechanics, and player lineups for Team AI Legends and Team NextGen Heroes.</p>
+            <p class="mt-2" style="color: var(--text-muted);">Official competition rules, mechanics, player lineups, and match results for Team AI Legends and Team NextGen Heroes.</p>
         </div>
     </header>
 
@@ -292,6 +316,85 @@
             </div>
         </div>
 
+        <!-- Chess Match Results & Scores Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="cyber-card">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="sport-icon-box">
+                            <i class="bi bi-trophy"></i>
+                        </div>
+                        <div>
+                            <h3 class="mb-1">Chess Match Results</h3>
+                            <span class="cyber-badge">Official Standings</span>
+                        </div>
+                    </div>
+
+                    <!-- Series Scoreboard -->
+                    <div class="match-score-board">
+                        <h4 class="text-uppercase tracking-wide mb-2" style="color: var(--neon-volt);">Series Score</h4>
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-auto text-end">
+                                <span class="h5 text-white mb-0">AI LEGENDS</span>
+                            </div>
+                            <div class="col-auto px-4">
+                                <span class="display-6 fw-bold" style="color: var(--neon-teal);">2 - 0</span>
+                            </div>
+                            <div class="col-auto text-start">
+                                <span class="h5 text-white mb-0">NEXTGEN HEROES</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Individual Matches -->
+                    <div class="row g-3">
+                        <!-- Board 1 Match -->
+                        <div class="col-md-6">
+                            <div class="match-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="cyber-badge">Board 1</span>
+                                    <span class="small text-success fw-bold"><i class="bi bi-check-circle-fill me-1"></i> Completed</span>
+                                </div>
+                                <div class="my-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="text-white">AI LEGENDS: <strong>Joshua B. Celis</strong></span>
+                                        <span class="badge bg-success text-dark">WINNER</span>
+                                    </div>
+                                    <div class="text-center my-1 text-muted small">versus</div>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted">NEXTGEN HEROES: Paul Adrian M. Santos</span>
+                                        <span class="text-muted">-</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Board 2 Match -->
+                        <div class="col-md-6">
+                            <div class="match-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="cyber-badge">Board 2</span>
+                                    <span class="small text-success fw-bold"><i class="bi bi-check-circle-fill me-1"></i> Completed</span>
+                                </div>
+                                <div class="my-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="text-white">AI LEGENDS: <strong>Ralph Lawrence Tacuyan</strong></span>
+                                        <span class="badge bg-success text-dark">WINNER</span>
+                                    </div>
+                                    <div class="text-center my-1 text-muted small">versus</div>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted">NEXTGEN HEROES: Joevann Andrew Barnuevo</span>
+                                        <span class="text-muted">-</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
         <div class="row g-4">
             
             <!-- Team AI Legends Roster -->
@@ -317,19 +420,19 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>--</strong></td>
-                                    <td><span class="text-white">N/A</span></td>
-                                    <td>Captain</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>--</strong></td>
-                                    <td><span class="text-white">N/A</span></td>
+                                    <td><strong>01</strong></td>
+                                    <td><span class="text-white">Joshua B. Celis</span></td>
                                     <td>Board 1</td>
                                 </tr>
                                 <tr>
+                                    <td><strong>02</strong></td>
+                                    <td><span class="text-white">Ralph Lawrence Tacuyan</span></td>
+                                    <td>Board 2</td>
+                                </tr>
+                                <tr>
                                     <td><strong>--</strong></td>
                                     <td><span class="text-white">N/A</span></td>
-                                    <td>Board 2</td>
+                                    <td>Captain / Board 3</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -360,19 +463,19 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>--</strong></td>
-                                    <td><span class="text-white">N/A</span></td>
-                                    <td>Captain</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>--</strong></td>
-                                    <td><span class="text-white">N/A</span></td>
+                                    <td><strong>01</strong></td>
+                                    <td><span class="text-white">Paul Adrian M. Santos</span></td>
                                     <td>Board 1</td>
                                 </tr>
                                 <tr>
+                                    <td><strong>02</strong></td>
+                                    <td><span class="text-white">Joevann Andrew Barnuevo</span></td>
+                                    <td>Board 2</td>
+                                </tr>
+                                <tr>
                                     <td><strong>--</strong></td>
                                     <td><span class="text-white">N/A</span></td>
-                                    <td>Board 2</td>
+                                    <td>Captain / Board 3</td>
                                 </tr>
                             </tbody>
                         </table>
