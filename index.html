@@ -146,6 +146,27 @@
             width: 100%;
         }
 
+        /* Cyber Small View Button */
+        .btn-cyber-view {
+            background: transparent;
+            color: var(--neon-teal);
+            border: 1px solid var(--neon-teal);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 6px 18px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
+        }
+
+        .btn-cyber-view:hover {
+            background: var(--neon-teal);
+            color: #01080a;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+        }
+
         .section-title {
             color: var(--neon-volt);
             font-weight: 900;
@@ -215,6 +236,36 @@
             font-weight: 700;
             letter-spacing: 1px;
         }
+
+        /* Futuristic Table Styling for Live Results */
+        .table-cyber {
+            color: var(--text-main);
+            background: transparent;
+            vertical-align: middle;
+        }
+
+        .table-cyber th {
+            background: rgba(0, 255, 255, 0.1);
+            color: var(--neon-volt);
+            border-color: var(--border-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            padding: 12px;
+        }
+
+        .table-cyber td {
+            background: rgba(8, 34, 38, 0.4);
+            color: var(--text-muted);
+            border-color: rgba(0, 255, 255, 0.15);
+            padding: 12px;
+        }
+
+        .table-cyber tbody tr:hover td {
+            background: rgba(8, 34, 38, 0.8);
+            color: var(--text-main);
+            border-color: var(--border-glow);
+        }
     </style>
 </head>
 <body>
@@ -222,7 +273,6 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-cyber sticky-top">
         <div class="container">
-
             <a class="navbar-brand" href="#">SPORTSFEST 2026 - SEASON IV</a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -242,14 +292,13 @@
 
     <!-- Hero Section -->
     <section class="hero d-flex align-items-center">
-
         <div class="container text-center">
-        	            <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
+            <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
                 <a class="btn btn-volt btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSecyi9Pw2Bh8B4GALi7I2JXIY7h687vTC-DJrkx3GZCyXwNcw/viewform?usp=publish-editor">Register as Captain</a>
                 <a class="btn btn-volt btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdqwbHJezuKFYjKOBhVjihwh7v_b_oHcl4cYRrI65h1BfTLww/viewform?usp=publish-editor">Register as Employee</a>
             </div>
             <br>
-            <img src="SPORTFEST-2026.jpg" class="img-fluid mb-3" style=" filter: drop-shadow(0 0 25px rgba(0,255,255,0.3));" alt="Sportsfest 2026 Logo">
+            <img src="SPORTFEST-2026.jpg" class="img-fluid mb-3" style="filter: drop-shadow(0 0 25px rgba(0,255,255,0.3));" alt="Sportsfest 2026 Logo">
 
             <div class="row align-items-center mt-5">
                 <!-- Team AI Legends -->
@@ -286,8 +335,172 @@
                 <div class="glass p-3"><h2 id="m2">00</h2><small class="text-uppercase">Minutes</small></div>
                 <div class="glass p-3"><h2 id="s">00</h2><small class="text-uppercase">Seconds</small></div>
             </div>
+        </div>
+    </section>
 
-            <!-- Dual Registration Action Buttons -->
+    <!-- Live Game Results Section (Chess & Bowling) -->
+    <section id="results" class="container py-5">
+        <h2 class="section-title mb-4">Live Tournament Results</h2>
+        <div class="row g-4">
+            
+            <!-- Chess Results Card -->
+            <div class="col-lg-6">
+                <div class="glass p-4 h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-controller fs-2" style="color: var(--neon-teal);"></i>
+                                <div>
+                                    <h4 class="mb-0" style="color: var(--neon-teal);">Chess <span class="badge bg-dark text-info border border-info ms-2">AI Legends (2) - (0) NextGen Heroes</span></h4>
+                                    <span class="small" style="color: var(--text-muted);">Tournament Standings</span>
+                                </div>
+                            </div>
+                            <a href="Chess.html" class="btn btn-cyber-view">View</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-cyber align-middle mb-0 text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Team</th>
+                                        <th>Score / Standing</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>AI Legends</strong></td>
+                                        <td><span class="badge bg-info text-dark fw-bold px-3 py-2 fs-6">2</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>NextGen Heroes</strong></td>
+                                        <td><span class="badge bg-secondary text-light fw-bold px-3 py-2 fs-6">0</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bowling Men Results Card -->
+            <div class="col-lg-6">
+                <div class="glass p-4 h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-trophy fs-2" style="color: var(--neon-volt);"></i>
+                                <div>
+                                    <h4 class="mb-0" style="color: var(--neon-volt);">Bowling Men <span class="badge bg-dark text-warning border border-warning ms-2">AI Legends (2) - (1) NextGen Heroes</span></h4>
+                                    <span class="small" style="color: var(--text-muted);">Round Breakdown</span>
+                                </div>
+                            </div>
+                            <a href="Bowling.html" class="btn btn-cyber-view">View</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-cyber align-middle mb-0 text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Round</th>
+                                        <th>NextGen Heroes</th>
+                                        <th>AI Legends</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>1st Round</strong></td>
+                                        <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">45</span></td>
+                                        <td><span class="badge bg-info text-dark fw-bold px-2 py-1">63</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2nd Round</strong></td>
+                                        <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">58</span></td>
+                                        <td><span class="badge bg-info text-dark fw-bold px-2 py-1">67</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>3rd Round</strong></td>
+                                        <td><span class="badge bg-warning text-dark fw-bold px-2 py-1">67</span></td>
+                                        <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">63</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bowling Women Results Card -->
+            <div class="col-lg-6">
+                <div class="glass p-4 h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-trophy-fill fs-2" style="color: var(--neon-teal);"></i>
+                                <div>
+                                    <h4 class="mb-0" style="color: var(--neon-teal);">Bowling Women <span class="badge bg-dark text-info border border-info ms-2">AI Legends (1) - (0) NextGen Heroes</span></h4>
+                                    <span class="small" style="color: var(--text-muted);">Round Breakdown</span>
+                                </div>
+                            </div>
+                            <a href="Bowling.html" class="btn btn-cyber-view">View</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-cyber align-middle mb-0 text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Round</th>
+                                        <th>NextGen Heroes</th>
+                                        <th>AI Legends</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>1st Round</strong></td>
+                                        <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">52</span></td>
+                                        <td><span class="badge bg-info text-dark fw-bold px-2 py-1">64</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Tournaments Card (Badminton, Basketball, Volleyball) -->
+            <div class="col-lg-6">
+                <div class="glass p-4 h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <i class="bi bi-calendar-check fs-2" style="color: var(--neon-teal);"></i>
+                            <div>
+                                <h4 class="mb-0" style="color: var(--neon-teal);">Upcoming Tournaments</h4>
+                                <span class="small" style="color: var(--text-muted);">Next Game Lineup</span>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-cyber align-middle mb-0 text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Sport Event</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Badminton</strong></td>
+                                        <td><span class="badge bg-dark text-info border border-info px-3 py-2">Next Schedule</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Basketball</strong></td>
+                                        <td><span class="badge bg-dark text-info border border-info px-3 py-2">Next Schedule</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Volleyball</strong></td>
+                                        <td><span class="badge bg-dark text-info border border-info px-3 py-2">Next Schedule</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </section>
@@ -378,35 +591,28 @@
             document.getElementById('m2').innerText = m;
             document.getElementById('s').innerText = s;
         }, 1000);
+
+        // 1. Disable Right-Click Context Menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // 2. Disable Inspect Element Shortcuts and View Source
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "F12") {
+                e.preventDefault();
+            }
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+            }
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+            }
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+            }
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-<script>
-  // 1. I-disable ang Right-Click Context Menu
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
-
-  // 2. I-disable ang Inspect Element Shortcuts at View Source
-  document.addEventListener('keydown', function(e) {
-    // I-disable ang F12
-    if (e.key === "F12") {
-      e.preventDefault();
-    }
-    // I-disable ang Ctrl+Shift+I (Inspect)
-    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-      e.preventDefault();
-    }
-    // I-disable ang Ctrl+Shift+J (Console)
-    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-      e.preventDefault();
-    }
-    // I-disable ang Ctrl+U (View Source)
-    if (e.ctrlKey && e.key === 'u') {
-      e.preventDefault();
-    }
-  });
-</script>
