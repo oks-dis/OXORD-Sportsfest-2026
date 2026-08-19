@@ -63,7 +63,7 @@
         }
 
         .hero {
-            min-height: 100vh;
+            min-height: 80vh;
             background: transparent;
             padding-top: 50px;
             padding-bottom: 50px;
@@ -82,68 +82,6 @@
         .glass:hover {
             border-color: var(--neon-volt);
             box-shadow: 0 0 30px rgba(204, 255, 0, 0.3), inset 0 0 20px rgba(0, 255, 255, 0.15);
-        }
-
-        .team-logo {
-            width: 160px;
-            height: 160px;
-            object-fit: contain;
-            animation: float 4s ease-in-out infinite;
-            filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.4));
-        }
-
-        @keyframes float {
-            50% { transform: translateY(-10px); }
-        }
-
-        .vs {
-            font-size: 75px;
-            font-weight: 900;
-            color: var(--neon-volt);
-            text-shadow: 0 0 25px var(--neon-volt), 0 0 50px rgba(204, 255, 0, 0.5);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            50% { transform: scale(1.1); text-shadow: 0 0 40px var(--neon-volt); }
-        }
-
-        /* Futuristic Action Button */
-        .btn-volt {
-            background: transparent;
-            color: var(--neon-volt);
-            border: 2px solid var(--neon-volt);
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            padding: 14px 35px;
-            border-radius: 50px;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            transition: color 0.4s ease;
-            box-shadow: 0 0 15px rgba(204, 255, 0, 0.2);
-        }
-
-        .btn-volt::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background: var(--neon-volt);
-            z-index: -1;
-            transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .btn-volt:hover {
-            color: #01080a;
-            box-shadow: 0 0 30px rgba(204, 255, 0, 0.7);
-        }
-
-        .btn-volt:hover::before {
-            width: 100%;
         }
 
         /* Cyber Small View Button */
@@ -293,42 +231,10 @@
     <!-- Hero Section -->
     <section class="hero d-flex align-items-center">
         <div class="container text-center">
-            <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
-                <a class="btn btn-volt btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSecyi9Pw2Bh8B4GALi7I2JXIY7h687vTC-DJrkx3GZCyXwNcw/viewform?usp=publish-editor">Register as Captain</a>
-                <a class="btn btn-volt btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdqwbHJezuKFYjKOBhVjihwh7v_b_oHcl4cYRrI65h1BfTLww/viewform?usp=publish-editor">Register as Employee</a>
-            </div>
-            <br>
-            <img src="SPORTFEST-2026.jpg" class="img-fluid mb-3" style="filter: drop-shadow(0 0 25px rgba(0,255,255,0.3));" alt="Sportsfest 2026 Logo">
-
-            <div class="row align-items-center mt-5">
-                <!-- Team AI Legends -->
-                <div class="col-md-5">
-                    <div class="glass p-4">
-                        <a href="#">
-                            <img src="TEAM-AI-LEGENDS-LOGO.png" class="team-logo" alt="Team AI Legends Logo">
-                        </a>
-                        <h4 class="mt-3 fw-bold" style="color: var(--neon-teal); text-shadow: 0 0 12px rgba(0,255,255,0.5);">TEAM AI LEGENDS</h4>
-                        <p class="text-muted mb-0">Neural Tech Division</p>
-                    </div>
-                </div>
-                
-                <!-- VS Indicator -->
-                <div class="col-md-2 my-3 my-md-0">
-                    <div class="vs">VS</div>
-                </div>
-
-                <!-- Team NextGen Heroes -->
-                <div class="col-md-5">
-                    <div class="glass p-4">
-                        <img src="TEAM-NEXTGEN-HEROES-LOGO.png" class="team-logo" alt="Team NextGen Heroes Logo">
-                        <h4 class="mt-3 fw-bold" style="color: var(--neon-volt); text-shadow: 0 0 12px rgba(204,255,0,0.5);">TEAM NEXTGEN HEROES</h4>
-                        <p class="text-muted mb-0">Quantum Volt Division</p>
-                    </div>
-                </div>
-            </div>
+            <img src="SPORTFEST-2026.jpg" class="img-fluid mb-4" style="filter: drop-shadow(0 0 25px rgba(0,255,255,0.3)); " alt="Sportsfest 2026 Logo">
 
             <!-- Countdown Timer -->
-            <h2 class="mt-5 text-white fw-bold" style="letter-spacing: 1px; text-shadow: 0 0 10px rgba(255,255,255,0.3);">Countdown to OXORD Anniversary & Announcement of Winners</h2>
+            <h2 class="mt-4 text-white fw-bold" style="letter-spacing: 1px; text-shadow: 0 0 10px rgba(255,255,255,0.3);">Countdown to OXORD Anniversary & Announcement of Winners</h2>
             <div id="countdown" class="d-flex justify-content-center gap-3 mt-3">
                 <div class="glass p-3"><h2 id="d">00</h2><small class="text-uppercase">Days</small></div>
                 <div class="glass p-3"><h2 id="h">00</h2><small class="text-uppercase">Hours</small></div>
@@ -338,9 +244,10 @@
         </div>
     </section>
 
-    <!-- Live Game Results Section (Chess & Bowling) -->
+    <!-- Live Game Results Section -->
     <section id="results" class="container py-5">
-        <h2 class="section-title mb-4">Live Tournament Results</h2>
+        <h2 class="section-title mb-2">Live Tournament Results</h2>
+        <p class="text-info mb-4 fw-semibold"><i class="bi bi-clock-history me-1"></i> Recent Event Updates</p>
         <div class="row g-4">
             
             <!-- Chess Results Card -->
@@ -351,32 +258,63 @@
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-controller fs-2" style="color: var(--neon-teal);"></i>
                                 <div>
-                                    <h4 class="mb-0" style="color: var(--neon-teal);">Chess <span class="badge bg-dark text-info border border-info ms-2">AI Legends (2) - (0) NextGen Heroes</span></h4>
-                                    <span class="small" style="color: var(--text-muted);">Tournament Standings</span>
+                                    <h4 class="mb-0" style="color: var(--neon-teal);">Chess <span class="badge bg-dark text-info border border-info ms-2">Separated Boards</span></h4>
+                                    <span class="small" style="color: var(--text-muted);">Boards (Aug 11 & Aug 18, 2026)</span>
                                 </div>
                             </div>
                             <a href="Chess.html" class="btn btn-cyber-view">View</a>
                         </div>
-                        <div class="table-responsive">
-                            <table class="table table-cyber align-middle mb-0 text-center">
-                                <thead>
-                                    <tr>
-                                        <th>Team</th>
-                                        <th>Score / Standing</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>AI Legends</strong></td>
-                                        <td><span class="badge bg-info text-dark fw-bold px-3 py-2 fs-6">2</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>NextGen Heroes</strong></td>
-                                        <td><span class="badge bg-secondary text-light fw-bold px-3 py-2 fs-6">0</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        
+                        <!-- Boards 1 to 2 Section -->
+                        <div class="mb-3">
+                            <h6 class="text-info fw-bold small text-uppercase mb-2"><i class="bi bi-calendar-event me-1"></i> Boards 1 to 2 (Aug 11, 2026)</h6>
+                            <div class="table-responsive">
+                                <table class="table table-cyber align-middle mb-0 text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Team</th>
+                                            <th>Score / Standing</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>AI Legends</strong></td>
+                                            <td><span class="badge bg-info text-dark fw-bold px-3 py-2 fs-6">2</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>NextGen Heroes</strong></td>
+                                            <td><span class="badge bg-secondary text-light fw-bold px-3 py-2 fs-6">0</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+
+                        <!-- Boards 3 to 4 Section -->
+                        <div>
+                            <h6 class="text-warning fw-bold small text-uppercase mb-2"><i class="bi bi-calendar-event me-1"></i> Boards 3 to 4 (Aug 18, 2026)</h6>
+                            <div class="table-responsive">
+                                <table class="table table-cyber align-middle mb-0 text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Team</th>
+                                            <th>Score / Standing</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>AI Legends</strong></td>
+                                            <td><span class="badge bg-info text-dark fw-bold px-3 py-2 fs-6">2</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>NextGen Heroes</strong></td>
+                                            <td><span class="badge bg-secondary text-light fw-bold px-3 py-2 fs-6">0</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -389,40 +327,84 @@
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-trophy fs-2" style="color: var(--neon-volt);"></i>
                                 <div>
-                                    <h4 class="mb-0" style="color: var(--neon-volt);">Bowling Men <span class="badge bg-dark text-warning border border-warning ms-2">AI Legends (2) - (1) NextGen Heroes</span></h4>
-                                    <span class="small" style="color: var(--text-muted);">Round Breakdown</span>
+                                    <h4 class="mb-0" style="color: var(--neon-volt);">Bowling Men <span class="badge bg-dark text-warning border border-warning ms-2">Separated Rounds</span></h4>
+                                    <span class="small" style="color: var(--text-muted);">Rounds (Aug 11 & Aug 18, 2026)</span>
                                 </div>
                             </div>
                             <a href="Bowling.html" class="btn btn-cyber-view">View</a>
                         </div>
-                        <div class="table-responsive">
-                            <table class="table table-cyber align-middle mb-0 text-center">
-                                <thead>
-                                    <tr>
-                                        <th>Round</th>
-                                        <th>NextGen Heroes</th>
-                                        <th>AI Legends</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>1st Round</strong></td>
-                                        <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">45</span></td>
-                                        <td><span class="badge bg-info text-dark fw-bold px-2 py-1">63</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>2nd Round</strong></td>
-                                        <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">58</span></td>
-                                        <td><span class="badge bg-info text-dark fw-bold px-2 py-1">67</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>3rd Round</strong></td>
-                                        <td><span class="badge bg-warning text-dark fw-bold px-2 py-1">67</span></td>
-                                        <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">63</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        
+                        <!-- Rounds 1 to 3 Section -->
+                        <div class="mb-3">
+                            <h6 class="text-info fw-bold small text-uppercase mb-2"><i class="bi bi-calendar-event me-1"></i> Rounds 1 to 3 (Aug 11, 2026)</h6>
+                            <div class="table-responsive">
+                                <table class="table table-cyber align-middle mb-0 text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Round</th>
+                                            <th>NextGen Heroes</th>
+                                            <th>AI Legends</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>1st Round</strong></td>
+                                            <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">45</span></td>
+                                            <td><span class="badge bg-info text-dark fw-bold px-2 py-1">63</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>2nd Round</strong></td>
+                                            <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">58</span></td>
+                                            <td><span class="badge bg-info text-dark fw-bold px-2 py-1">67</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>3rd Round</strong></td>
+                                            <td><span class="badge bg-warning text-dark fw-bold px-2 py-1">67</span></td>
+                                            <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">63</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+
+                        <!-- Rounds 4 to 7 Section -->
+                        <div>
+                            <h6 class="text-warning fw-bold small text-uppercase mb-2"><i class="bi bi-calendar-event me-1"></i> Rounds 4 to 7 (Aug 18, 2026)</h6>
+                            <div class="table-responsive">
+                                <table class="table table-cyber align-middle mb-0 text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Round</th>
+                                            <th>NextGen Heroes</th>
+                                            <th>AI Legends</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>4th Round</strong></td>
+                                            <td><span class="badge bg-warning text-dark fw-bold px-2 py-1">87</span></td>
+                                            <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">78</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>5th Round</strong></td>
+                                            <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">67</span></td>
+                                            <td><span class="badge bg-info text-dark fw-bold px-2 py-1">77</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>6th Round</strong></td>
+                                            <td><span class="badge bg-warning text-dark fw-bold px-2 py-1">69</span></td>
+                                            <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">52</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>7th Round</strong></td>
+                                            <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">70</span></td>
+                                            <td><span class="badge bg-info text-dark fw-bold px-2 py-1">73</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -435,69 +417,86 @@
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-trophy-fill fs-2" style="color: var(--neon-teal);"></i>
                                 <div>
-                                    <h4 class="mb-0" style="color: var(--neon-teal);">Bowling Women <span class="badge bg-dark text-info border border-info ms-2">AI Legends (1) - (0) NextGen Heroes</span></h4>
-                                    <span class="small" style="color: var(--text-muted);">Round Breakdown</span>
+                                    <h4 class="mb-0" style="color: var(--neon-teal);">Bowling Women <span class="badge bg-dark text-info border border-info ms-2">Separated Rounds</span></h4>
+                                    <span class="small" style="color: var(--text-muted);">Rounds (Aug 11 & Aug 18, 2026)</span>
                                 </div>
                             </div>
                             <a href="Bowling.html" class="btn btn-cyber-view">View</a>
                         </div>
-                        <div class="table-responsive">
-                            <table class="table table-cyber align-middle mb-0 text-center">
-                                <thead>
-                                    <tr>
-                                        <th>Round</th>
-                                        <th>NextGen Heroes</th>
-                                        <th>AI Legends</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>1st Round</strong></td>
-                                        <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">52</span></td>
-                                        <td><span class="badge bg-info text-dark fw-bold px-2 py-1">64</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        
+                        <!-- Round 1 Section -->
+                        <div class="mb-3">
+                            <h6 class="text-info fw-bold small text-uppercase mb-2"><i class="bi bi-calendar-event me-1"></i> Round 1 (Aug 11, 2026)</h6>
+                            <div class="table-responsive">
+                                <table class="table table-cyber align-middle mb-0 text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Round</th>
+                                            <th>NextGen Heroes</th>
+                                            <th>AI Legends</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>1st Round</strong></td>
+                                            <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">52</span></td>
+                                            <td><span class="badge bg-info text-dark fw-bold px-2 py-1">64</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+
+                        <!-- Rounds 2 to 3 Section -->
+                        <div>
+                            <h6 class="text-warning fw-bold small text-uppercase mb-2"><i class="bi bi-calendar-event me-1"></i> Rounds 2 - 3 (Aug 18, 2026)</h6>
+                            <div class="table-responsive">
+                                <table class="table table-cyber align-middle mb-0 text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Round</th>
+                                            <th>NextGen Heroes</th>
+                                            <th>AI Legends</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>2nd Round</strong></td>
+                                            <td><span class="badge bg-warning text-dark fw-bold px-2 py-1">56</span></td>
+                                            <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">55</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>3rd Round</strong></td>
+                                            <td><span class="badge bg-secondary text-light fw-bold px-2 py-1">47</span></td>
+                                            <td><span class="badge bg-warning text-dark fw-bold px-2 py-1">65</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
-            <!-- Upcoming Tournaments Card (Badminton, Basketball, Volleyball) -->
+            <!-- Other Sports Card -->
             <div class="col-lg-6">
                 <div class="glass p-4 h-100 d-flex flex-column justify-content-between">
                     <div>
-                        <div class="d-flex align-items-center gap-3 mb-3">
-                            <i class="bi bi-calendar-check fs-2" style="color: var(--neon-teal);"></i>
-                            <div>
-                                <h4 class="mb-0" style="color: var(--neon-teal);">Upcoming Tournaments</h4>
-                                <span class="small" style="color: var(--text-muted);">Next Game Lineup</span>
+                        <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-grid-3x3-gap fs-2" style="color: var(--neon-volt);"></i>
+                                <div>
+                                    <h4 class="mb-0" style="color: var(--neon-volt);">Other Sports</h4>
+                                    <span class="small" style="color: var(--text-muted);">Badminton, Basketball, Volleyball & More</span>
+                                </div>
                             </div>
+                            <a href="sports.html" class="btn btn-cyber-view">View All</a>
                         </div>
-                        <div class="table-responsive">
-                            <table class="table table-cyber align-middle mb-0 text-center">
-                                <thead>
-                                    <tr>
-                                        <th>Sport Event</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Badminton</strong></td>
-                                        <td><span class="badge bg-dark text-info border border-info px-3 py-2">Next Schedule</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Basketball</strong></td>
-                                        <td><span class="badge bg-dark text-info border border-info px-3 py-2">Next Schedule</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Volleyball</strong></td>
-                                        <td><span class="badge bg-dark text-info border border-info px-3 py-2">Next Schedule</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <p class="">Explore schedules, matches, and standings for all other exciting sports events lined up for Sportsfest 2026.</p>
+                    </div>
+                    <div>
+                        <a href="sports.html" class="btn btn-cyber-view w-100 py-2"><i class="bi bi-arrow-right-circle me-2"></i> Go to Other Sports</a>
                     </div>
                 </div>
             </div>
@@ -509,22 +508,16 @@
     <section id="news" class="container py-5">
         <h2 class="section-title mb-4">Latest News</h2>
         <div class="row g-4">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="cardx">
                     <h5>Sportsfest Kickoff</h5>
-                    <p class="mt-2">The games officially begin next week on Monday, August 10, 2026. Get ready!</p>
-                </div>
-            </div>    
-            <div class="col-md-4">
-                <div class="cardx">
-                    <h5>Team Registration</h5>
-                    <p class="mt-2">Registration for AI Legends and NextGen Heroes is now open.</p>
+                    <p class="mt-2">The games officially began on Monday, August 10, 2026. Get ready!</p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="cardx">
                     <h5>Contest Updates</h5>
-                    <p class="mt-2">Watch for schedules of OXORD Got Talent and competitions.</p>
+                    <p class="mt-2">Watch for schedules of OXORD Got Talent and ongoing competitions.</p>
                 </div>
             </div>
         </div>
@@ -544,25 +537,27 @@
             </div>
             <div class="col-md-3">
                 <a href="activities.html">
-                <div class="cardx text-center">
-                    <i class="bi bi-stars fs-1"></i>
-                    <h5 class="mt-3 mb-0" style="color: var(--neon-volt);">Activities</h5>
-                </div>
-            </a>
+                    <div class="cardx text-center">
+                        <i class="bi bi-stars fs-1"></i>
+                        <h5 class="mt-3 mb-0" style="color: var(--neon-volt);">Activities</h5>
+                    </div>
+                </a>
             </div>
             <div class="col-md-3">
                 <a href="oxord-got-talent.html">
-                <div class="cardx text-center">
-                    <i class="bi bi-mic fs-1"></i>
-                    <h5 class="mt-3 mb-0" style="color: var(--neon-volt);">OXORD Got Talent</h5>
-                </div>
-            </a>
+                    <div class="cardx text-center">
+                        <i class="bi bi-mic fs-1"></i>
+                        <h5 class="mt-3 mb-0" style="color: var(--neon-volt);">OXORD Got Talent</h5>
+                    </div>
+                </a>
             </div>
             <div class="col-md-3">
-                <div class="cardx text-center">
-                    <i class="bi bi-calendar-event fs-1"></i>
-                    <h5 class="mt-3 mb-0" style="color: var(--neon-volt);">Schedule</h5>
-                </div>
+                <a href="schedule.html">
+                    <div class="cardx text-center">
+                        <i class="bi bi-calendar-event fs-1"></i>
+                        <h5 class="mt-3 mb-0" style="color: var(--neon-volt);">Schedule</h5>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
